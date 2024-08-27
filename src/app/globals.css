@@ -2,32 +2,237 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: "estedadRegular";
+  src: url("../../public/fonts/Estedad_Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: "estedadBold";
+  src: url("../../public/fonts/Estedad_Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "estedadMedium";
+  src: url("../../public/fonts/Estedad_Medium.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "estedadlight";
+  src: url("../../public/fonts/Estedad_Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.estedad-light {
+  font-family: "estedadlight", sans-serif;
+  /* font-weight: initial; */
+  font-weight: 150;
+}
+.estedad-bold {
+  font-family: "estedadBold", sans-serif;
+  /* font-weight: bold; */
+  font-weight: 350;
+}
+
+.estedad-medium {
+  font-family: "estedadMedium", sans-serif;
+  /* font-weight: bold; */
+  font-weight: 200;
+}
+
+.estedad-regular {
+  font-family: "estedadRegular", sans-serif;
+  font-weight: 100;
+  /* font-weight: bold; */
+}
+
+:root {
+  /* Your default theme */
+  --background: white;
+  --foreground: black;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* color: black; */
+  background: #fafafa;
+
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  /* background: #0080ff; */
 }
 
+.layout-sec {
+  display: flex;
+  justify-content: center;
+  background: #e9ecef;
+  min-height: calc(100vh - 112px);
+}
+
+.layout-sec > div {
+  margin: 4px !important;
+  border-radius: 8px;
+  /* height: calc(100vh - 112px); */
+  justify-content: center;
+}
+
+/* [data-theme="dark"] body,
+.layout-sec {
+  background-color: #161a1d !important;
+  color: white !important;
+}
+
+[data-theme="dark"] .layout-sec > div {
+  background-color: black !important;
+}
+
+[data-theme="light"] .layout-sec {
+  background-color: #e9ecef !important;
+  color: black !important;
+}
+
+[data-theme="light"] .layout-sec > div {
+  background-color: white !important;
+} */
+
+cont-body {
+  width: 100%;
+  padding: 0px;
+  /* padding: 20px; */
+  margin: 0px;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  /* background-color: black; */
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+Footer {
+  background-color: initial !important;
+}
+
+.container-fluid {
+  border-radius: 6px;
+}
+.collapse {
+  visibility: visible !important;
+}
+.counter-badge {
+  position: absolute;
+  margin: -22px;
+  span {
+    padding: 2px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #f44336;
+    font-weight: 500;
+    font-size: 15px;
+    color: white !important;
+  }
+}
+
+.icon-btn {
+  background-color: transparent !important;
+}
+
+/* Necessary  */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.cardDefaultStyle {
+  height: calc(100vh - 128px);
+  width: 100%;
+}
+
+.limited-text-1 {
+  transition: 0.3s;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.limited-text-2 {
+  transition: 0.3s;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.limited-text-3 {
+  transition: 0.3s;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.pointer {
+  cursor: pointer !important;
+}
+.opacity-0 {
+  opacity: initial !important;
+}
+/* .link-color {
+  color: inherit !important;
+} */
+a {
+  text-decoration: inherit !important;
+}
+code {
+  text-wrap: wrap !important;
+}
+
+.wordwrap {
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: anywhere; /* Internet Explorer 5.5+ */
+}
+
+.error-500 {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  /* background-image: url('../../public/images/Errors/500Error.jpg'); */
+
+  * {
+    top: 3%;
+    left: 40%;
+  }
+}
+
+.height-calc {
+  height: calc(100vh - 104px);
 }
