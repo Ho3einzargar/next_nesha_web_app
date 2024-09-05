@@ -17,7 +17,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
         <HandleOnComplete />
         <section className="col-12 layout-sec p-1">{children}</section>
         <Toaster toastOptions={{ className: 'react-hot-toast' }} />
-        <Footer />
+        {/* <Footer /> */}
       </NextThemesProvider>
     </NextUIProvider>
   );

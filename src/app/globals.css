@@ -62,8 +62,9 @@
 body {
   /* color: black; */
   background: #fafafa;
+  height: 200vh;
 
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
@@ -74,13 +75,14 @@ body {
   display: flex;
   justify-content: center;
   background: #e9ecef;
-  min-height: calc(100vh - 112px);
+  /* min-height: calc(100vh - 112px); */
 }
 
 .layout-sec > div {
   margin: 4px !important;
   border-radius: 8px;
-  /* height: calc(100vh - 112px); */
+  height: 100vh;
+  height: calc(100vh - 112px);
   justify-content: center;
 }
 
@@ -235,4 +237,13 @@ code {
 
 .height-calc {
   height: calc(100vh - 104px);
+}
+
+/* Chips  */
+.hover-chip {
+  transition: all 0.5s;
+  padding: 4px;
+  &:hover {
+      transform: translateY(-12px) scale(1.08);
+  }
 }
