@@ -9,16 +9,16 @@ interface Props {
   addressIcon: string;
   haveIcon: boolean;
   IconTitle: any;
+  size?: 'sm' | 'md' | 'lg' | undefined;
   afterClick: (item?: any) => void;
   variant?: 'dot' | 'solid' | 'bordered' | 'light' | 'flat' | 'faded' | 'shadow' | undefined;
   colorChip?: 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | undefined;
 }
 
-export const ChipDynamicCom = ({ keyChip, colorChip, title, IconTitle, haveIcon, addressIcon, onHover, variant, item, afterClick }: Props) => {
-
+export const ChipDynamicCom = ({ keyChip, size, colorChip, title, IconTitle, haveIcon, addressIcon, onHover, variant, item, afterClick }: Props) => {
   return (
-    <Chip className={`mx-1 p-2 py-4 pointer ${onHover ? 'hover-chip' : ''}`} onClick={() => afterClick(item)} key={keyChip} color={colorChip} variant={variant}>
-      <span className="w-100 text-center">{title}</span>
+    <Chip className={`m-1 py-5 p-4 pointer ${onHover ? 'hover-chip' : ''} ${size=='lg' ? 'h-4rem' : ''}`} size={size} onClick={() => afterClick(item)} key={keyChip} color={colorChip} variant={variant}>
+      <span className="w-100 text-center estedad-bold">{title}</span>
       <br></br>
       {haveIcon ? (
         <div className="d-flex gap-1 flex-wrap w-100 justify-center gap-1">

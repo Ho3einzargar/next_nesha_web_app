@@ -31,6 +31,7 @@ import { NavHeadMenu } from '@/app/helper/MenuNavbar/menu_navbar';
 import { getLocalSTG, setLocalSTG } from '@/app/helper/localRepository/localStorage';
 import { SunIcon } from './SunIcon';
 import { MoonIcon } from './MoonIcon';
+import IconLocal from '../IconsComp/Icon';
 
 export default function NavBar() {
   const router = useRouter();
@@ -43,8 +44,8 @@ export default function NavBar() {
   const { theme, setTheme } = useTheme();
 
   const toggleDarkMode = (checked: boolean) => {
-    console.log("CHECKED",checked);
-    
+    console.log('CHECKED', checked);
+
     checked ? setTheme('dark') : setTheme('light');
     setDarkMode(checked);
   };
@@ -79,7 +80,7 @@ export default function NavBar() {
         <NavbarContent className="mb-0">
           <NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} className="sm:hidden" />
           <NavbarBrand>
-            <p className="font-bold text-inherit m-0">Nesha</p>
+            <p className="font-bold text-light m-0">Nesha</p>
           </NavbarBrand>
         </NavbarContent>
 
@@ -110,12 +111,12 @@ export default function NavBar() {
                   </Button>
                 </DropdownTrigger>
                 <DropdownMenu aria-label="selection example" variant="flat" closeOnSelect={true} disallowEmptySelection selectionMode="none">
-                  <DropdownItem key={1} startContent={<Image alt={'iconUser'} src={'/images/icons/home_tabs/user.png'} width="25" height="25" />}>
+                  <DropdownItem key={1} startContent={<IconLocal Address={'user.png'} />}>
                     {username}
                   </DropdownItem>
                   <DropdownItem
                     key={2}
-                    startContent={<Image alt={'iconUser'} src={'/images/icons/logout.png'} width="25" height="25" />}
+                    startContent={<IconLocal Address={'logout_red.png'} />}
                     onClick={() => {
                       logOut();
                       setUsername(null);

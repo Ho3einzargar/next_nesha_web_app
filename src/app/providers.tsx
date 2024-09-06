@@ -12,7 +12,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   return (
     <NextUIProvider className="col-12 p-0" navigate={router.push}>
-      <NextThemesProvider attribute="class" defaultTheme="dark">
+      <NextThemesProvider attribute="class" enableColorScheme defaultTheme="dark">
         <NavBar />
         <HandleOnComplete />
         <section className="col-12 layout-sec p-1">{children}</section>

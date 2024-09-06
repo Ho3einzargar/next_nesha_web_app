@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${poppins.variable} font-sans dark`}>
       <body>
         <Providers>{children}</Providers>
-        <footer className='w-100'>
+        <footer className='w-100 mt-4'>
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-sm-4 col-md-3 item">

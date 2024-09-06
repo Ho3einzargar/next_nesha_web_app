@@ -6,7 +6,13 @@ export const roadMapApi = {
   },
   search: 'search',
   softwares: {
+    software_detail: 'softwares',
     favorite_softwares: 'softwares/?likes=dessc&page=1',
-    recent_fields: 'fields/'
+    recent_fields: 'fields/',
+    comment:'children/?page=1'
+  },
+  labs: {
+    detail_lab: 'labs'
   }
+
 };

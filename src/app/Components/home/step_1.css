@@ -10,7 +10,10 @@
     min-height: 250px;
 }
 
-.services__list{
+.services__list {
     height: 215px;
     align-items: center;
+}
+.height-search-box {
+    height: calc(100vh - 300px) !important;
 }
