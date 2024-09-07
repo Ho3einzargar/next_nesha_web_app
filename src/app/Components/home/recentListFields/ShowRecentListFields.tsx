@@ -18,7 +18,7 @@ const ShowRecentListFields = ({ fieldsList, loader }: Props) => {
         {fieldsList.length != 0 ? (
           fieldsList.map((item: responseModelRecentFields, idx: number) => {
             return (
-              <Chip className="mx-1 p-2 py-4 pointer hover-chip" onClick={() => router.push(`/field/${item.id}`)} key={idx} color="warning" variant="bordered">
+              <Chip className="m-1 p-2 py-4 pointer hover-chip" onClick={() => router.push(`/field/${item.id}`)} key={idx} color="warning" variant="bordered">
                 <span className="w-100 text-center">{item.name}</span>
                 <br></br>
                 <div className="d-flex gap-1 flex-wrap w-100 justify-center gap-1">

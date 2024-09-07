@@ -262,3 +262,7 @@ code {
 .text-gray {
   color: gray !important;
 }
+
+.link {
+  color: blue !important;
+}

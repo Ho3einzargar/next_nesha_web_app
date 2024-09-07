@@ -19,7 +19,6 @@ import {
   DropdownItem,
   Avatar,
   AvatarIcon,
-  SwitchProps,
   VisuallyHidden,
   useSwitch,
   Switch,
@@ -32,9 +31,11 @@ import { getLocalSTG, setLocalSTG } from '@/app/helper/localRepository/localStor
 import { SunIcon } from './SunIcon';
 import { MoonIcon } from './MoonIcon';
 import IconLocal from '../IconsComp/Icon';
+import { usePathname } from 'next/navigation';
 
 export default function NavBar() {
   const router = useRouter();
+  const pathName = usePathname();
 
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [openModal, setOpenModal] = React.useState(false);
@@ -50,11 +51,20 @@ export default function NavBar() {
     setDarkMode(checked);
   };
 
+  function checkUrl(url: any) {
+    if (url == pathName) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   const GenerateItem = (item: any) => {
     return (
       <NavbarItem key={item.id}>
         <Button variant="light" onClick={() => router.push(item.link)}>
-          {item.name}
+          <span className={`estedad-light ${checkUrl(item.link) ? 'link' : ''}`}>{item.name}</span>
+          <IconLocal Address={item.icon + '.svg'} />
         </Button>
       </NavbarItem>
     );

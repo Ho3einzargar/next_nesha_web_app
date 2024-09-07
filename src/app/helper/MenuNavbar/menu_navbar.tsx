@@ -6,9 +6,10 @@ export const NavbarMenu: any = [
 ];
 
 export const NavHeadMenu: any = [
-  { id: 1, name: 'Home', link: '/' },
-  { id: 2, name: 'Pending', link: '/pending' },
-  { id: 3, name: 'Recent', link: '/recentlist' },
-  // { id: 4, name: 'Import', link: '/import' },
-  // { id: 5, name: 'Template', link: '/template' },
+  { id: 1, name: 'خانه', icon: 'menu/home', link: '/' },
+  { id: 2, name: 'رشته ها', icon: 'fields', link: '/fields_search' },
+  { id: 3, name: 'آزمایشگاه ها', icon: 'laboratory', link: '/labs_search' },
+  { id: 4, name: 'افزودن', icon: 'menu/add_software', link: '/add_software' },
+  { id: 5, name: 'جستجو حرفه ای', icon: 'menu/search_pro', link: '/search_pro' },
+  { id: 6, name: 'ارتباط با ما', icon: 'menu/contact_us', link: '/contact_us' },
 ];

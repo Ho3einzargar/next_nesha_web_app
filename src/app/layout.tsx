@@ -1,5 +1,6 @@
 'use client';
 import './globals.css';
+import './nprogress.css';
 import { Providers } from './providers';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import localFont from '@next/font/local';
