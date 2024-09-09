@@ -51,7 +51,7 @@ const LabDetailPage = () => {
             <IconLocal Address={'software.svg'} width={23} height={23} />
             <h5 className="estedad-medium mb-0">نرم افزار ها:</h5>
           </label>
-          <SoftwaresList
+          {/* <SoftwaresList
             loader={isLoading}
             softwares={[
               {
@@ -70,8 +70,8 @@ const LabDetailPage = () => {
                 likes: 8,
               },
             ]}
-          />
-          {/* <SoftwaresList loader={isLoading} softwares={softwaresLabList} /> */}
+          /> */}
+          <SoftwaresList loader={isLoading} softwares={softwaresLabList} />
         </CardBody>
       </Card>
     </div>

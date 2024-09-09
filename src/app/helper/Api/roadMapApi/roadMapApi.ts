@@ -21,6 +21,9 @@ export const roadMapApi = {
     lab_search: 'lab_search/?field_id=2',
     platforms: 'platforms',
     result: 'software_search'
+  },
+  add_software:{
+    platform_search:'platform_search/'
   }
 
 };

@@ -16,7 +16,7 @@ const FieldDetailComp = ({ labs, loader }: Props) => {
   } else {
     if (labs?.length != 0) {
       return (
-        <div className="flex flex-wrap items-center">
+        <div className="flex flex-wrap items-center mt-3">
           {Array.isArray(labs) ? (
             labs.map((lab, idx: number) => {
               return (

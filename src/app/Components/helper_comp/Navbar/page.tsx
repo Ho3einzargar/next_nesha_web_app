@@ -157,6 +157,7 @@ export default function NavBar() {
               size="md"
               color="secondary"
               thumbIcon={({ isSelected, className }) => (isSelected ? <SunIcon className={className} /> : <MoonIcon className={className} />)}></Switch>
+            {/* <Switch defaultSelected onChange={(e: any) => toggleDarkMode(!e.target.checked)} size="lg" color="success" startContent={<SunIcon />} endContent={<MoonIcon />}></Switch> */}
           </NavbarItem>
         </NavbarContent>
 

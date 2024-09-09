@@ -193,7 +193,7 @@ const SearchProPage = () => {
                 <Switch defaultSelected size="md" color="success"></Switch>
               </div>
             </Col>
-            <div className="w-100 flex flex-wrap justify-center my-2">
+            <div className="w-100 flex flex-wrap justify-center my-3">
               <Button onClick={() => searchResultFun()} variant="bordered" color="primary" className="w-50">
                 <span className="estedad-bold">جست و جو</span>
               </Button>
